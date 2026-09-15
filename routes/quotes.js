@@ -31,6 +31,7 @@ function isBlank(value) {
 // Very small honeypot + basic field validation. No external validation
 // library needed for a form this size.
 router.post('/quote', quoteLimiter, (req, res) => {
+     console.log('>>> POST /api/quote received at', new Date().toISOString());
   const body = req.body || {};
 
   // Honeypot field: real users never fill this in (it's hidden via CSS).
